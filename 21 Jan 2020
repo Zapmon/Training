@@ -1,0 +1,35 @@
+Sets:21/01/2020
+==============================================
+let evens: Set = [9,10,12,14,16,18]
+let odds: Set = [5,7,9,11,13]
+let primes = [2,3,5,7]
+print(odds.union(evens).sorted())
+print(odds.intersection(evens).sorted())
+print(odds.subtracting(primes).sorted())
+
+==============================================
+Enumuration
+==============================================
+enum demoenum
+{
+  case sun, cloud, foggy, rain 
+}
+var demo=demoenum.sun
+print(demo)
+
+===============================================
+print star Pattern:
+===============================================
+print("Enter the number of rows: ")
+var input = Int(readLine()!)!
+print("\nOutput is : \n")
+for i in 1...input
+{
+  for j in 1...i
+  {
+      print("*",terminator:" ")
+  }
+  print("\n")
+}
+
+===============================================

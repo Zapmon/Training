@@ -1,0 +1,89 @@
+print("===================Count the occurrences of letters=========\n")
+
+var message="Hello World"
+var e:Int=0;
+var h:Int=0;
+var l:Int=0;
+var o:Int=0;
+var w:Int=0;
+var d:Int=0;
+var r:Int=0;
+var Dict:[String:Int]
+
+for i in message
+{
+  if(i=="H" || i=="h")
+  {
+    h = h + 1
+  }
+  else if(i=="E" || i=="e")
+  {
+    e = e + 1
+  }
+  else if(i=="L" || i=="l")
+  {
+    l = l + 1
+  }
+  else if(i=="O" || i=="o")
+  {
+    o = o + 1
+  }
+  else if(i=="W" || i=="w")
+  {
+    w = w + 1
+  }
+  else if(i=="D" || i=="d")
+  {
+    d = d + 1
+  }
+  else if(i=="R" || i=="r")
+  {
+    r = r + 1
+  }
+}
+print("H : \(h) , E : \(e) , L is \(l), O : \(o), W : \(w), D : \(d), R : \(r) \n")
+
+Dict=["H" : h, "E" : e , "L" : l, "O" : o, "W" : w, "D" : d, "R" : r]
+for t in Dict
+{
+  print(t)
+}
+
+
+
+print("\n===================Decimal To Binary Conversion=============\n")
+
+var num = 15
+var str = String(num, radix: 2)
+print(str)
+
+
+print("\n===================Sum of Array================\n")
+var number=[1,2,3,4,5]
+var s=0
+for i in number{
+  s += i
+}
+print(s)
+
+
+print("\n===================Even or Odd================\n")
+var n=14
+if(n%2 == 0)
+{
+  print("Number is Even")
+}
+else
+{
+  print("Number is Odd")
+}
+
+print("\n===================Pattern================\n")
+for i in 1...5
+{
+  for j in 1...i
+  {
+    print(i-j+1,terminator:" ")  
+  }
+  print("\n")
+}

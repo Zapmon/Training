@@ -1,0 +1,127 @@
+Function
+===========================================
+func Table(number:Int) -> String
+{
+    for i in 1...10
+    {
+      print("\(number) * \(i) = \(number*i)")
+    }
+    return " "
+}
+
+print(Table(number:12))
+
+===========================================
+While loop
+===========================================
+var number=1
+var table = 15
+while(number<=10)
+{
+  print(" \(table) * \(number) = \(number*table)")
+  number = number + 1
+}
+===========================================
+Do-while loop
+===========================================
+var number=1
+var table = 15
+repeat
+{
+  print(" \(table) * \(number) = \(number*table)")
+  number = number + 1
+}
+while(number<=10)
+============================================
+For Loop
+============================================
+var table = 18
+for index in 1...10
+{
+  print("\(table) * \(index) = \(index*table)")
+}
+
+============================================
+Struct
+============================================
+struct food
+{
+  var fruits:String
+  var veg:String
+}
+
+var cook=food(fruits:"Mango",veg:"Potato")
+print(cook.fruits,cook.veg)
+
+var newCook=cook
+newCook.fruits="Papaya"
+print(cook.fruits,cook.veg)
+print(newCook.fruits,newCook.veg)
+
+=============================================
+Classes
+=============================================
+
+class Food
+{
+  var fruits:String
+  var veg:String
+  init(fruits:String,veg:String)
+  {
+    self.fruits=fruits
+    self.veg=veg
+  }
+  func Diet()
+  {
+    print("Hello this is food class")
+  }
+}
+
+class NewFood : Food
+{
+  var color:String
+  init(fruits:String,veg:String,color:String)
+  {
+    self.color=color
+    super.init(fruits:fruits,veg:veg)
+  }
+
+  override func Diet()
+  {
+    print("Take always healthy diet")
+  }
+}
+
+var Meal=NewFood(fruits:"Mango",veg:"Peas",color:"Yellow")
+print(Meal.fruits)
+print(Meal.veg)
+print(Meal.color)
+print(Meal.Diet())
+============================================================
+Static Keyword
+============================================================
+struct Person
+{
+  static var student="John"
+  var name:String
+  var age:Int
+}
+let fan = Person(name:"Mahesh",age:42)
+print(fan.name,fan.age)
+print(Person.student)
+
+=============================================================
+String function
+=============================================================
+var str:String="mahesh"
+print(str.uppercased())
+
+let str1 = "mahesh"
+let reversed = String(str1.reversed())
+print(reversed.uppercased())
+
+=============================================================
+
+=============================================================
+
+
