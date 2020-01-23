@@ -1,0 +1,27 @@
+Merge two lists and display single sorted array
+========================================================
+    var list1:[Int]  = [10,12,14,16,18]
+    var list2:[Int]  = [5,7,9,11,13,48]
+    print("First List Is = \(list1)")
+    print("Second List Is = \(list2)")
+    var list3 = list1+list2
+    var length=list3.count
+    var temp:Int
+    for i in 0..<length-1
+    {
+      for j in 0..<length-i-1
+      {
+        if(list3[j]>list3[j+1])
+        {
+          temp = list3[j]; 
+          list3[j] = list3[j+1]; 
+          list3[j+1] = temp;
+        }
+      }
+    }
+    print("Sorted List Is = \(list3)")
+==========================================================
+
+
+
+
