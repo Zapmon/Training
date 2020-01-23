@@ -20,7 +20,50 @@ Merge two lists and display single sorted array
       }
     }
     print("Sorted List Is = \(list3)")
+
 ==========================================================
+Display the reverse of given number
+==========================================================    
+
+var number = 0
+var rem = 0
+print("Enter a number : ")
+number = Int(readLine()!)!
+var temp = number
+while(number>0)
+{
+  rem = rem * 10
+  rem = number%10+rem
+  number=number/10
+}
+print("Reverse of \(temp) is : \(rem)")
+
+==========================================================
+Check Whether given number is Palindrome number or Not
+==========================================================
+var number = 0
+var rem = 0
+print("Enter a number : ")
+number = Int(readLine()!)!
+var temp = number
+while(number>0)
+{
+  rem = rem * 10
+  rem = number%10+rem
+  number=number/10
+}
+
+
+if(temp==rem)
+{
+  print("\(temp) is a palindrome number")
+}
+else
+{
+  print("\(temp) is not a palindrome number")
+}
+
+============================================================
 
 
 
