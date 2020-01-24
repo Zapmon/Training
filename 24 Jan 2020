@@ -1,0 +1,40 @@
+Pattern 1
+============================================
+print("Enter a number ")
+var number = Int(readLine()!)!
+
+func Table(num:Int)-> Void
+{
+  print("\nOutput Table is : ")
+  for i in 1...10
+  {
+      print("\(i) * \(num) = \(i*num)")
+  }
+}
+Table(num:number)
+
+=============================================
+Pattern 2
+=============================================
+
+var row:Int
+print("Enter the number of rows you want to print : ")
+row = Int(readLine()!)!
+print("\n")
+
+for i in 0..<row
+{
+  for _ in 0..<row
+  {
+    print(terminator:" ")
+  }
+  row = row-1
+  for _ in 0...i
+  {
+    print("*",terminator:" ")
+  }
+  print("\n")
+}
+
+
+
