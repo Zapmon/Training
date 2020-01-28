@@ -1,0 +1,72 @@
+Check whether string is palindrome or not 
+============================================
+import java.util.*;
+class Main {
+  public static void main(String[] args) {
+    int a=0,b=0,count=0;
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the string");
+    String message=sc.nextLine();
+     b=message.length()-1;
+    char[] m=new char[100];
+    for(int i=0;i<message.length();i++)
+    {
+      m[i]=message.charAt(i);
+    }
+    while(b>a)
+    {
+      if(m[a]!=m[b])
+      {
+         count = 0;
+         break;
+      }
+      else
+      {
+          a++;
+          b--;
+          count = 1;
+      }
+    }
+    if(count == 0){
+      System.out.println("not palindrome");
+    
+    }
+    else{
+       System.out.println("palindrome");
+    }
+  }
+}
+=================================================
+Remove duplicate letter from String
+=================================================
+import java.util.*;
+class Main {
+  public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the string");
+    String message=sc.nextLine();
+    char[] m=new char[100];
+    for(int i=0;i<message.length();i++)
+    {
+      m[i]=message.charAt(i);
+    }
+    for(int i=0;i<message.length();i++)
+    {
+      for(int j=i+1;j<message.length();j++)
+      {
+        if(m[i]==m[j])
+        {
+          for(int k=j;k<message.length();k++)
+          {
+            m[k]=m[k+1];
+          }
+        }
+      }
+    }
+    for(int j=0;j<message.length();j++)
+    {
+      System.out.print(m[j]);
+    }
+  }
+}
+==================================================
