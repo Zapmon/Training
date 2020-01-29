@@ -1,0 +1,47 @@
+Factorial program
+====================================
+var fact = 1
+print("Enter a number")
+var number = Int(readLine()!)!
+for i in 1...number
+{
+  fact *= i
+}
+print("Factorial is : \(fact)")
+
+====================================
+
+var n=0
+var m=1
+var sum = 0
+print("Enter a number")
+var number = Int(readLine()!)!
+print("\nResult is :")
+if( number == 0)
+  {
+    print("Nothing in series")
+  }
+  else if(number == 1){
+    print(n)
+  }
+  else if(number == 2){
+    print(n)
+    print(m)
+  }
+  else{
+    print(n)
+    print(m)
+    
+while(number > 2)
+{
+    sum = n + m
+    n = m
+    m = sum
+    print(sum)
+number = number-1
+}
+}
+
+
+
+=================================
