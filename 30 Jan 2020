@@ -66,3 +66,30 @@ else
   print("\(num) is not a armstrong number")
 }
 =============================================================
+Find the Second Smallest Number from the list
+=============================================================
+//: Playground - noun: a place where people can play
+var list:[Int] = [5,3,6,1,7,2,9]
+var length = list.count
+
+func secondSmallest(li:[Int],ln:Int) -> Int
+{
+    var list:[Int] = li
+    var temp = 0
+    for i in 0..<ln
+    {
+        for j in i+1..<ln
+        {
+            if(list[i]>list[j])
+            {
+                temp = list[i]
+                list[i] = list[j]
+                list[j] = temp
+            }
+        }
+    }
+    return list[1]
+}
+print("Second smallest number from the list is : \(secondSmallest(li:list,ln:7))")
+
+======================================================================================
