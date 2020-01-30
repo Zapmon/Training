@@ -93,3 +93,28 @@ func secondSmallest(li:[Int],ln:Int) -> Int
 print("Second smallest number from the list is : \(secondSmallest(li:list,ln:7))")
 
 ======================================================================================
+Find the Second Largest Number from the list
+======================================================================================
+var list:[Int] = [5,1,6,10,7,2,9]
+var length = list.count
+
+func secondLargest(li:[Int],ln:Int) -> Int
+{
+    var list:[Int] = li
+    var temp = 0
+    for i in 0..<ln
+    {
+        for j in i+1..<ln
+        {
+            if(list[i]>list[j])
+            {
+                temp = list[i]
+                list[i] = list[j]
+                list[j] = temp
+            }
+        }
+    }
+    print(list)
+    return list[ln-2]
+}
+print("Second Largest number from the list is : \(secondLargest(li:list,ln:7))")
