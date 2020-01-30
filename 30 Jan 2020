@@ -90,7 +90,7 @@ func secondSmallest(li:[Int],ln:Int) -> Int
     }
     return list[1]
 }
-print("Second smallest number from the list is : \(secondSmallest(li:list,ln:7))")
+print("Second smallest number from the list is : \(secondSmallest(li:list,ln:length))")
 
 ======================================================================================
 Find the Second Largest Number from the list
@@ -117,4 +117,4 @@ func secondLargest(li:[Int],ln:Int) -> Int
     print(list)
     return list[ln-2]
 }
-print("Second Largest number from the list is : \(secondLargest(li:list,ln:7))")
+print("Second Largest number from the list is : \(secondLargest(li:list,ln:length))")
