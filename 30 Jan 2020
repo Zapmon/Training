@@ -1,0 +1,68 @@
+Check whether given number is a prime number or not
+===================================================
+print("Enter a number")
+var number = Int(readLine()!)!
+var flag=0
+if(number==0 || number==1)
+{
+  print("\(number) is not a prime number")
+}
+else 
+{
+  for i in 2..<number
+  {
+    if(number%i==0)
+    {
+      print("\(number) is not a prime number")
+      flag=1
+      break;
+    }
+    
+  }
+  if(flag==0)
+  {
+    print("\(number) is prime number ")
+  }
+}
+=======================================================
+General check whether number is armstrong number or not
+=======================================================
+print("Enter a number")
+var number = Int(readLine()!)!
+var num = number
+var sum = 0
+var t=0
+var digits=0
+var a=0
+t = number
+
+while (t != 0) 
+{
+      digits=digits+1;
+      t = t/10;
+}
+t = number
+func power(n:Int,r:Int)->Int
+{
+  var p=1
+  for _ in 1...r
+  {
+    p = p*n
+  }
+  return p
+}
+while(number != 0)
+{
+  a = number%10
+  number = number/10
+  sum = sum + power(n:a,r:digits)
+}
+if(sum==num)
+{
+  print("\(num) is a armstrong number")
+}
+else
+{
+  print("\(num) is not a armstrong number")
+}
+=============================================================
