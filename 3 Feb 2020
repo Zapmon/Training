@@ -1,0 +1,66 @@
+//: Playground - noun: a place where people can play
+
+import UIKit
+
+/* Variable */
+var name:String
+name = "mahesh"
+print(name)
+var department:String = "iOS"
+print(department)
+
+/* demonstrate how to use enumeration in swift programming */
+
+enum ConnectionStatus
+{
+    case unknown
+    case disconnected
+    case connecting
+    case connected
+}
+ var connect = ConnectionStatus.connecting
+connect = .connected
+switch connect {
+case .connected:
+    print("Connected")
+case .disconnected:
+    print("Disconnected")
+case .connecting:
+    print("Connecting")
+default:
+    print("State not valid")
+}
+
+/* Constant */
+let number = 145
+print(number)
+
+/* Print Unicode of String Characters */
+var message = "hello"
+for i in message.utf8
+{
+ print(i)
+}
+
+/* Access Modifiers */
+public class Student
+{
+    internal func marks(s1:Int,s2:Int,s3:Int)
+    {
+        print("Total Marks is :  \(s1+s2+s3)")
+    }
+    
+}
+public class Detail:Student
+{
+    func detail(n:String,s1:Int,s2:Int,s3:Int)
+    {
+       super.marks(s1: s1, s2: s2, s3: s3)
+        print("Student name is : \(n) , First subject marks is: \(s1),second subject marks is: \(s2),third subject marks is: \(s3)")
+    }
+}
+
+var data = Detail()
+data.detail(n:"Mahesh",s1: 89, s2: 91, s3: 96)
+data.marks(s1: 89, s2: 67, s3:78)
+
