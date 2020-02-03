@@ -45,7 +45,7 @@ for i in message.utf8
 /* Access Modifiers */
 public class Student
 {
-    internal func marks(s1:Int,s2:Int,s3:Int)
+   func marks(s1:Int,s2:Int,s3:Int)
     {
         print("Total Marks is :  \(s1+s2+s3)")
     }
@@ -64,3 +64,44 @@ var data = Detail()
 data.detail(n:"Mahesh",s1: 89, s2: 91, s3: 96)
 data.marks(s1: 89, s2: 67, s3:78)
 
+/* perform Override in swift */
+
+class UserInfo{
+    func printInfo()
+    {
+        print("Your name is mahesh")
+    }
+}
+class PrintQuestion : UserInfo
+{
+    override func printInfo()
+    {
+        print("What is your name ? ")
+    }
+}
+
+var n = PrintQuestion()
+n.printInfo()
+
+/* perform method overloading */
+class OverloadingDemo
+{
+    func Result(num1:Int,num2:Int)
+    {
+        print("Sum of \(num1) + \(num2) = \(num1+num2)")
+    }
+    func Result(num1:Int,num2:Int,num3:Int)
+    {
+        print("Subtraction of \(num1+num3) - \(num2) = \(num1-num2)")
+    }
+    func Result(num1:Int,num2:Int,num3:Float)
+    {
+        print("Multilplication of \(num1) * \(num2) + \(num3) = \(Float(num1*num2)+num3)")
+    }
+    func Result(num1:Float,num2:Float)
+    {
+        print("Division of \(num1) / \(num2) = \(num1/num2)")
+    }
+}
+var m = OverloadingDemo()
+m.Result(num1: 23, num2: 354,num3: 45.4)
