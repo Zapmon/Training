@@ -1,0 +1,49 @@
+/* control statements : Continue */
+
+var index = 10
+
+repeat {
+    index = index + 1
+    if( index == 25 ){
+        continue
+    }
+    print( "Value of index is \(index)")
+} while index < 30
+
+/* Range Operator */
+let passingGrade = 70...100
+for i in passingGrade
+{
+print(i)
+}
+
+/* Tuple  */
+var dat = (1,2,3,4,5)
+print(dat.0)
+ /* Simple closure */
+var simple = {
+    print("Hello World")
+}
+simple()
+
+/* Closure with parameter and return type */
+var difficult:(Int,Int) -> Int = { (n1,n2) in
+    return n1+n2
+}
+var operation = difficult(23,54)
+print(operation)
+
+/* Guard statements */
+func demo(Username:String?)
+{
+    guard Username != nil,info(name: Username!) else {
+        print("Your name is empty")
+        return
+    }
+    print("Your name is : \(Username!)")
+}
+func info(name:String) -> Bool
+{
+    return name.count == 4 ? true : false
+}
+demo(Username: "code")
