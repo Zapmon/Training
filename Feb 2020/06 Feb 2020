@@ -1,0 +1,24 @@
+//: Playground - noun: a place where people can play
+/* Closure */
+import UIKit
+
+let simpleClosure:(String) -> (String) = { name in
+    let greeting = "Hello World " + "This is zapbuild technologies"
+    return greeting
+}
+let result = simpleClosure("Hello mahesh")
+print(result)
+
+
+/* Classes and Objects */
+class Salary{
+    var salary: Int
+    init(salary: Int) {
+        self.salary = salary
+    }
+}
+class EmpSalary {
+    var salary = 10000
+}
+let Income = EmpSalary()
+print("Employee salary is \(Income.salary)")
