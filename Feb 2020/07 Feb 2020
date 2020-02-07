@@ -1,0 +1,24 @@
+//: Playground - noun: a place where people can play
+
+/* Subscript */
+
+import UIKit
+class Week
+{
+    var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+    var number = [1,2,3,4,5,36,78]
+
+    subscript(index:Int) -> String
+    {
+        get{
+            return days[index]
+        }
+    }
+}
+var p = Week()
+print("Days of weak are : ")
+for i in 0...6
+{
+    print(p[i])
+}
+
