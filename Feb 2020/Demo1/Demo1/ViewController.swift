@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var button: UIButton!
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var textLabel: UILabel!
@@ -17,6 +18,10 @@ class ViewController: UIViewController {
     var current: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tapgesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapGesture(sender:)))
+        view.addGestureRecognizer(tapgesture)
+        button.addTarget(self, action: #selector(ViewController.tapGesture(sender:)), for: .touchUpInside)
+        
         // Do any additional setup after loading the view, typically from a nib.
         progressView.setProgress(0.0, animated: true)
         
@@ -38,7 +43,10 @@ class ViewController: UIViewController {
         }
         
     }
-
+    @objc func tapGesture(sender: UITapGestureRecognizer){
+        view.endEditing(true)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

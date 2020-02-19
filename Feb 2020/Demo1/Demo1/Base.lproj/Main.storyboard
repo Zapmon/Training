@@ -62,6 +62,18 @@
                                 <color key="progressTintColor" red="1" green="0.67638973479999998" blue="0.50871410350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="trackTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPn-Uy-7bG">
+                                <rect key="frame" x="180" y="187" width="46" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uwR-QC-QSg">
+                                <rect key="frame" x="36" y="367" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -74,6 +86,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="button" destination="bPn-Uy-7bG" id="0DE-kv-vbJ"/>
                         <outlet property="progressView" destination="EdC-Ef-2Nl" id="bob-BC-rig"/>
                         <outlet property="segmentedControl" destination="5IQ-3C-w6x" id="bms-x8-gc9"/>
                         <outlet property="textLabel" destination="yNj-Vt-0tI" id="hv2-eZ-xtC"/>
@@ -81,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-358" y="100"/>
+            <point key="canvasLocation" x="-359.19999999999999" y="99.753694581280797"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="3A7-sJ-Fd9">
@@ -141,6 +154,10 @@
                                     <segue destination="F3F-Ae-efq" kind="show" id="ytH-3H-uU3"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="FwB-N9-LUn">
+                                <rect key="frame" x="192" y="621" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -168,7 +185,7 @@
         <!--Third View Controller-->
         <scene sceneID="JSr-ak-gnp">
             <objects>
-                <viewController id="F3F-Ae-efq" customClass="ThirdViewController" customModule="Demo1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThirdViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="F3F-Ae-efq" customClass="ThirdViewController" customModule="Demo1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x58-fS-Udz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,6 +220,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5M-Uo-25n">
+                                <rect key="frame" x="122" y="339" width="130" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -218,6 +241,7 @@
                     </view>
                     <connections>
                         <outlet property="segmentedViewControl" destination="C7Y-7U-ZSk" id="M97-oR-tfV"/>
+                        <outlet property="test" destination="d5M-Uo-25n" id="ddW-TK-qpX"/>
                         <outlet property="txtlbl" destination="UL1-If-GbA" id="jkN-jC-i7f"/>
                     </connections>
                 </viewController>
