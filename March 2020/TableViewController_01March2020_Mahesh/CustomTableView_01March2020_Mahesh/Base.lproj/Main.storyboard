@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomTableView_01March2020_Mahesh" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="drM-hR-C6X">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="93" id="cWO-mO-fw1" customClass="TableViewCell" customModule="CustomTableView_01March2020_Mahesh" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="1024" height="93"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cWO-mO-fw1" id="3wp-2H-6lH">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="92.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rqx-vq-XQk">
+                                                    <rect key="frame" x="10" y="9" width="112" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="112" id="sjr-4F-lry"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Rqx-vq-XQk" firstAttribute="top" secondItem="3wp-2H-6lH" secondAttribute="topMargin" constant="-6" id="NJD-I0-kS1"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Rqx-vq-XQk" secondAttribute="bottom" constant="-1" id="TGm-Ra-Yv2"/>
+                                                <constraint firstItem="Rqx-vq-XQk" firstAttribute="leading" secondItem="3wp-2H-6lH" secondAttribute="leadingMargin" constant="-5" id="x8K-7N-tbC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgview" destination="Rqx-vq-XQk" id="WGS-nw-OBB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="drM-hR-C6X" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0gX-ec-xen"/>
+                            <constraint firstItem="drM-hR-C6X" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="IzQ-Lw-EBS"/>
+                            <constraint firstItem="drM-hR-C6X" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Rcq-Po-k9h"/>
+                            <constraint firstItem="drM-hR-C6X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hC5-ez-MPD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-99.375" y="116.19718309859155"/>
+        </scene>
+    </scenes>
+</document>
